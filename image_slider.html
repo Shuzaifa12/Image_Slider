@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        /* body style in which background color is black and border is in box size */
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            background-color: rgb(0, 0, 0);
+            
+        }
+        /* All the style for heading tag i.e., IMAGE SLIDER */
+        .Heading{
+            border: 2px double red;
+            width: fit-content;
+            text-align: center;
+            margin: 10px auto ;
+            color: white;
+            font-size: 30px;
+            padding: 3px;
+        }
+        /* All the style for main tag which includes the main item i.e., IMAGES */
+        main{
+            width: 800px;
+            height: 500px;
+            margin: auto;
+            margin-top: 30px;
+            position: relative;
+            box-shadow: 0px 0px 50px yellowgreen;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        /* All the style for class slide which includes the main item i.e., IMAGES */
+        .slide{
+            width: 100%;
+            height: 100%;
+            transition: 0.5s;
+            position: absolute;
+        }
+        /* This is for class nav */
+        .nav{
+            text-align: center;
+            margin-top: 20px;
+        }
+        /* This is for over all class nav button */
+        .nav.button{
+            font-size: 25px;
+        }
+        /* Only for Previous and Next button */
+        .Prev,.Next{
+            border: 2px solid red;
+            color: white;
+            font-size: medium;
+            padding: 2px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        /* Hover effect for Previous and Next button */
+        .Prev:hover, .Next:hover{
+            background-color: rgb(23, 192, 29);
+            
+        }
+        /* Media Querry for responsive designs */
+        @media (max-width: 1440px) {
+        main {
+            width: 700px; /* Adjust width for smaller screens */
+            height: 400px; /* Adjust height for smaller screens */
+            }
+        }
+        @media (max-width: 1024px) {
+        main {
+            width: 400px; /* Further adjust width for smaller screens */
+            height: 300px; /* Further adjust height for smaller screens */
+            }
+        }
+        @media (max-width: 768px) {
+        main {
+            width: 300px; /* Adjust width for mobile devices */
+            height: 200px; /* Adjust height for mobile devices */
+            }
+            .Heading {
+                font-size: 24px; /* Adjust font size for smaller screens */
+            }
+
+            .nav .button {
+                font-size: 20px; /* Adjust button font size for smaller screens */
+            }
+        }
+        @media (max-width: 320px) {
+            main {
+                width: 250px; /* Adjust width for smaller mobile devices */
+                height: 150px; /* Adjust height for smaller mobile devices */
+            }
+
+            .Heading {
+                font-size: 20px; /* Further adjust font size for smaller screens */
+            }
+
+            .nav .button {
+                font-size: 16px; /* Further adjust button font size for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Heading  -->
+    <div class="Heading">IMAGE SLIDER</div>
+    <!-- All pictures included in main section -->
+    <main>
+        <img src="https://picsum.photos/id/236/800/500", class="slide" alt="">
+        <img src="https://picsum.photos/id/237/800/500", class="slide" alt="">
+        <img src="https://picsum.photos/id/238/800/500", class="slide" alt="">
+        <img src="https://picsum.photos/id/239/800/500", class="slide" alt="">
+        <img src="https://picsum.photos/id/240/800/500", class="slide" alt="">
+        <img src="https://picsum.photos/id/241/800/500", class="slide" alt="">
+        <img src="https://picsum.photos/id/242/800/500", class="slide" alt="">
+        <img src="https://picsum.photos/id/243/800/500", class="slide" alt="">
+    </main>
+    <!-- This div container is for buttons -->
+    <div class="nav">
+        <button class="Prev" onclick="goPrev()">
+            Prev
+        </button>
+        <button class="Next" onclick="goNext()">
+            Next
+        </button>
+    </div>
+    <!-- Javascript file  -->
+    <script src="image_slider.js"></script>
+</body>
+</html>
